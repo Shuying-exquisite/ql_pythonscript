@@ -302,6 +302,7 @@ if __name__ == '__main__':
     if st.button("执行操作"):
         if wc:
             st.write("您输入的变量值是:", wc)
+        else: st.stop()
     st.write = partial(st.write, flush=True)
     token = wc
     cks = token.split("&")
