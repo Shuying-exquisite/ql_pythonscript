@@ -298,7 +298,7 @@ class Ghdy:
 
 
 if __name__ == '__main__':
-    wc = st.text_input("请输入变量值")
+    wc = st.text_input("请输入变量值", "")
     if st.button("执行操作"):
         if wc:
             st.write("您输入的变量值是:", wc)
