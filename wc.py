@@ -21,16 +21,6 @@ def main():
             st.write("您输入的变量值是:", wc)
     return wc
 
-def get_environ(key, default="", output=True):
-    def no_read():
-        if output:
-            st.write(f"未填写环境变量 {key} 请添加")
-
-        return default
-
-    return environ.get(key) if environ.get(key) else no_read()
-
-
 def generate_random_string(length):
     letters_and_digits = string.ascii_lowercase + string.digits
     return ''.join(random.choice(letters_and_digits) for i in range(length))
@@ -419,7 +409,7 @@ class Ghdy:
 if __name__ == '__main__':
     main()
     st.write = partial(st.write, flush=True)
-    token = get_environ("wc")
+    token = wc
     cks = token.split("&")
     st.write("🔔检测到{}个ck记录\n🔔".format(len(cks)))
     numbers=1
