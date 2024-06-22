@@ -13,27 +13,6 @@ from Crypto.Cipher import PKCS1_v1_5
 import base64
 import urllib.parse
 
-def load_send():
-    global send
-    cur_path = path.abspath(path.dirname(__file__))
-    if path.exists(cur_path + "/SendNotify.py"):
-        try:
-            from SendNotify import send
-            st.write("加载通知服务成功！")
-        except Exception as e:
-            send = False
-            st.write(e)
-            st.write(
-                '''加载通知服务失败~\n请自行补全SendNotify依赖"''')
-    else:
-        send = False
-        st.write(
-            '''加载通知服务失败~\n请自行补全SendNotify依赖"''')
-
-
-load_send()
-
-
 def get_environ(key, default="", output=True):
     def no_read():
         if output:
@@ -439,7 +418,6 @@ if __name__ == '__main__':
     for ck_all in cks:
         st.write("💗第{}个账号开始！！！\n".format(numbers))
         ck = ck_all.split("#")
-        st.write("账号备注{}\n".format(ck[2]))
         run = Ghdy(ck)
         st.write()
         run.login()
