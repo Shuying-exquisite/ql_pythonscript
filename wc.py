@@ -299,11 +299,11 @@ class Ghdy:
 
 if __name__ == '__main__':
     wc = st.text_input("请输入变量值", "")
-    if not wc: st.stop()
     if st.button("执行操作"):
         if wc:
             st.write("您输入的变量值是:", wc)
         else: st.write("您输入的ck有误，请重新输入。")
+    if not wc: st.stop()
     st.write = partial(st.write, flush=True)
     token = wc
     cks = token.split("&")
