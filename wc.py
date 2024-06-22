@@ -315,6 +315,5 @@ if __name__ == '__main__':
         run.login()
         run.get_id()
         run.look()
-        run.chou()
         numbers=numbers+1
     st.write("全部跑完啦😁")
