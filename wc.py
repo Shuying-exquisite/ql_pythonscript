@@ -410,7 +410,7 @@ class Ghdy:
 
 if __name__ == '__main__':
     st.write = partial(st.write, flush=True)
-    wc = st.text_input('请输入参数:', '默认值')
+    wc = st.text_input('请输入参数:')
     token = get_environ("wc")
     cks = token.split("&")
     st.write("🔔检测到{}个ck记录\n🔔".format(len(cks)))
