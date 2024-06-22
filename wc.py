@@ -417,6 +417,7 @@ class Ghdy:
 
 
 if __name__ == '__main__':
+    main()
     st.write = partial(st.write, flush=True)
     token = get_environ("wc")
     cks = token.split("&")
