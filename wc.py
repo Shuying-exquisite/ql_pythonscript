@@ -298,7 +298,11 @@ class Ghdy:
 
 
 if __name__ == '__main__':
-    wc = st.text_input("请输入变量值", "")
+    markdown_text = """
+# 望潮阅读有礼阅读程序
+"""
+    st.markdown(markdown_text)
+    wc = st.text_input("请输入变量值，变量格式：密码#手机号", "")
     if st.button("执行操作"):
         if wc:
             st.write("您输入的变量值是:", wc)
