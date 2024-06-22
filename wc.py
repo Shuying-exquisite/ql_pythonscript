@@ -299,11 +299,10 @@ class Ghdy:
 
 if __name__ == '__main__':
     markdown_text = """
-# 望潮抽奖程序
-## 请提交变量
-## 变量格式：密码#11位手机号
-"""
-
+    # 望潮抽奖程序
+    ## 请提交变量
+    ## 变量格式：密码#11位手机号
+    """
     st.markdown(markdown_text)
     wc = st.text_input("请输入变量值", "")
     if st.button("执行操作"):
