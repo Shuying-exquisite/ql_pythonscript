@@ -288,6 +288,13 @@ class Ghdy:
             if '成功' in c_r.json()['msg']:
                 xx = f'✅全部浏览完成，打开APP抽红包吧！'
                 st.write(xx)
+                self.msg += xx + '\n'
+            else:
+                xx = c_r.json()['msg']
+                print(xx)
+                self.msg += xx + '\n'
+        except Exception as e:
+            st.write(e)
 
 
 if __name__ == '__main__':
