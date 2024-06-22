@@ -13,14 +13,6 @@ from Crypto.Cipher import PKCS1_v1_5
 import base64
 import urllib.parse
 
-def main():
-    st.title('用户输入并执行操作示例')
-    wc = st.text_input("请输入变量值")
-    if st.button("执行操作"):
-        if wc:
-            st.write("您输入的变量值是:", wc)
-    return wc
-
 def generate_random_string(length):
     letters_and_digits = string.ascii_lowercase + string.digits
     return ''.join(random.choice(letters_and_digits) for i in range(length))
@@ -407,7 +399,10 @@ class Ghdy:
 
 
 if __name__ == '__main__':
-    main()
+    wc = st.text_input("请输入变量值")
+    if st.button("执行操作"):
+        if wc:
+            st.write("您输入的变量值是:", wc)
     st.write = partial(st.write, flush=True)
     token = wc
     cks = token.split("&")
