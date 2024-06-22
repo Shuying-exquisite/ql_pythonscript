@@ -13,6 +13,14 @@ from Crypto.Cipher import PKCS1_v1_5
 import base64
 import urllib.parse
 
+def main():
+    st.title('用户输入并执行操作示例')
+    wc = st.text_input("请输入变量值")
+    if st.button("执行操作"):
+        if wc:
+            st.write("您输入的变量值是:", wc)
+    return wc
+
 def get_environ(key, default="", output=True):
     def no_read():
         if output:
@@ -410,7 +418,6 @@ class Ghdy:
 
 if __name__ == '__main__':
     st.write = partial(st.write, flush=True)
-    wc = st.text_input('请输入参数:')
     token = get_environ("wc")
     cks = token.split("&")
     st.write("🔔检测到{}个ck记录\n🔔".format(len(cks)))
