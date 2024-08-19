@@ -2,6 +2,7 @@
  本仓库收集可以在青龙面板运行的python脚本，同时还为没有青龙面板的萌新提供在线运行的方式。
  
  教程：https://github.com/Shuying-exquisite/ql_pythonscript/blob/main/%E6%95%99%E7%A8%8B.md
+ 
  视频教程：https://www.bilibili.com/video/BV1SVp2eFEJc/
 ## 如有失效脚本，请在issues提出
 # 一旦使用或复制了任何相关项目，则视为您已接受免责声明
